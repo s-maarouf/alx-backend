@@ -17,7 +17,7 @@ class LRUCache(BaseCaching):
     def put(self, key, item):
         """Assigns key value to cache_data"""
         if key is None or item is None:
-            pass
+            return
 
         if key not in self.cache_data:
             if len(self.cache_data) + 1 > BaseCaching.MAX_ITEMS:
